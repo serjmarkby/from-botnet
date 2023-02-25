@@ -2,7 +2,7 @@
 version: "3.9"
 services:
   botnet:
-    container_name: tg-soft
+    container_name: frt
     image: dionis1902/frt:latest
     restart: always
     volumes:
@@ -23,7 +23,7 @@ services:
       - ./data/postgres_data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: data
-      POSTGRES_PASSWORD: huyigfyf6ttrtf^
+      POSTGRES_PASSWORD: secret_password
       POSTGRES_USER: root
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
